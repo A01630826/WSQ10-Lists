@@ -1,0 +1,25 @@
+#listas
+import math
+
+def mediaa(lesta):
+    aMedias=float(total/10)
+    return aMedias
+
+def standev(lista):
+    acum=0
+    for x in lista:
+        acum+=(x**2/len(lista))
+    acum-=(mediaa(lista))**2
+    return math.sqrt(acum)
+    
+mlist=[]
+for i in range (10):
+    a=int(input("Enter a number "+str(i+1)+ ": "))
+    mlist.append(a)  #Acumulo los valores que va teniendo hasta que sean 10
+                    #Guardando cada uno
+total=(sum(mlist))
+
+print("Your list is",mlist)
+print("Your total is ",total)
+print("Average of",mlist, "is:", str(mediaa(mlist)))
+print("Standard deviation is: ",standev(mlist))
